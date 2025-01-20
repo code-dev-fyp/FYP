@@ -8,24 +8,14 @@
     <meta name="description" content="TO-DO application" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>Irfan TO-DO App</title>
+    <title>TO-DO App</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    
-    <h1>Enter your name:</h1>
-    <form>
-      <input type="text" id="userInput" />
-      <button type="button" onclick="displayInput()">Submit</button>
-    </form>
-    <p id="output"></p>
 
-    <script>
-      function displayInput() {
-        // Intentional XSS vulnerability
-        const userInput = document.getElementById("userInput").value;
-        document.getElementById("output").innerHTML = "Hello, " + userInput;
-      }
-       
-     
+    <!-- Intentional bug: Missing alt attribute for the image -->
+    <img src="%PUBLIC_URL%/logo192.png" />
+
+  </body>
+</html>
